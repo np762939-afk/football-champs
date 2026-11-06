@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Football Champs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Football Champs</h1>
+<header>
+  <span>Монеты: <b id="coins">0</b></span>
+  <span>Сезон: <b id="season">1</b></span>
+  <span>Рейтинг команды: <b id="ovr">0</b></span>
+</header>
+<nav>
+  <button class="tab on" data-t="play">Матчи</button>
+  <button class="tab" data-t="team">Команда</button>
+  <button class="tab" data-t="market">Рынок</button>
+  <button class="tab" data-t="cups">Трофеи</button>
+</nav>
+<div class="news" id="news"></div>
+<section id="p-play" class="on"><div class="grid" id="play"></div><div class="box" id="match" hidden></div></section>
+<section id="p-team"><div id="team"></div></section>
+<section id="p-market"><div id="market"></div></section>
+<section id="p-cups"><div id="cups"></div></section>
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

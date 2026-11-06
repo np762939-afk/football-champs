@@ -1,0 +1,31 @@
+:root{--bg:#e8f0e4;--panel:#f7fbf4;--ink:#18241a;--btn:#2d6fd6;--btn-ink:#fff;--line:#9db09d;--gold:#c27a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101712;--panel:#18221a;--ink:#e4f0e4;--btn:#5b9bff;--btn-ink:#08172e;--line:#4b5f4b;--gold:#ffb84a}}
+:root[data-theme="dark"]{--bg:#101712;--panel:#18221a;--ink:#e4f0e4;--btn:#5b9bff;--btn-ink:#08172e;--line:#4b5f4b;--gold:#ffb84a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Verdana,Geneva,sans-serif;display:flex;flex-direction:column;align-items:center;gap:10px;padding:10px;min-height:100vh}
+header{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+nav{display:flex;gap:6px}
+section{display:none;width:min(96vw,820px);flex-direction:column;gap:10px}
+section.on{display:flex}
+button{font:inherit;border:0;border-radius:10px;background:var(--btn);color:var(--btn-ink);cursor:pointer;padding:9px 14px}
+button:disabled{opacity:.45;cursor:default}
+button.tab{background:var(--panel);color:var(--ink)}
+button.tab.on{background:var(--btn);color:var(--btn-ink)}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.row{display:flex;gap:6px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.card,.box,.news{background:var(--panel);border:2px solid var(--line);border-radius:12px;padding:10px;font-size:.9rem;display:flex;flex-direction:column;gap:6px}
+.card button{padding:6px 9px;font-size:.8rem}
+.card.lock{opacity:.55}
+.card.gold{border-color:var(--gold)}
+.news{text-align:center;width:min(96vw,820px);box-sizing:border-box}
+.score{font-size:1.4rem;font-weight:bold;text-align:center}
+.box ul{margin:0;padding-left:18px;max-height:180px;overflow:auto}
+h3{margin:4px 0}
+small{opacity:.75}
+h1{margin:0;font-size:1.7rem}
+table{width:100%;border-collapse:collapse}
+td,th{padding:3px 6px;text-align:left;border-bottom:1px solid var(--line)}
+tr.me{font-weight:bold}
+.card.sel{border-color:var(--btn);box-shadow:0 0 0 3px var(--btn)}
